@@ -1,0 +1,104 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box; 
+}
+
+
+body{
+	background: #F0F8FF;
+	background-size: cover;
+	font-size: 15px;
+	overflow-x: hidden;
+
+}
+
+.headerrow{
+	
+	margin: 0 auto;
+	background: #283e4a;
+	overflow: hidden;
+}
+
+.logo{
+	height: 30px;
+	width: auto;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main-nav{
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 5px;
+
+}
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 30px;
+}
+.main-nav li a{
+	color: #fff;
+	text-decoration: none;
+
+}
+.clearfix:after{
+	content:'.';
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+
+}
+
+.searchrow{
+	background: #FFFFFF;
+	overflow: hidden;
+	align-content: center;
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid #D2D9DF;
+
+}
+
+.findmentor{
+	text-decoration-style: none;
+	text-align: center;
+	font-size: 20px;
+	font-family: Optima, sans-serif;
+
+
+}
+.searchbar{
+	margin: 20px;
+}
+.searchbar input{
+	width: 45%;
+	height: 30px;
+}
+.btn{
+	background: #0073b1;
+	overflow: hidden;
+	padding: 10px;
+	margin: 5px;
+	border: none;
+	display: inline-block;
+	font-size: 16px;
+	color: white;
+}
+.recommendations{
+	margin-top: 30px;
+	list-style: none;
+}
+
+.recommendations li{
+	background: #FFFFFF;
+	overflow: hidden;
+	align-content: center;
+	padding: 30px;
+	margin: 10px;
+	border: 1px solid #D2D9DF;
+}
+
