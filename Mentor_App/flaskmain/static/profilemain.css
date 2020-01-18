@@ -354,3 +354,22 @@ a.article-title:hover {
 	padding-left: 200px;
 	padding-right: 200px;
 }
+.aaa{
+
+}
+.aab{
+  background: #FFFFFF;
+  overflow: hidden;
+  align-content: center;
+  padding: 30px;
+  margin-left: 180px;
+  margin-right: 180px;
+  margin-top: 60px;
+  border: 1px solid #D2D9DF;
+  text-align: center;
+
+}
+
+.checked {
+  color: orange;
+}

@@ -2,8 +2,6 @@
 <html>
 <head>
 	<!-- <title>Profile</title> -->
-
-
   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +19,6 @@
     {% endif %}
 </head>
 
-
 <body>
  <header>
 	<nav>
@@ -35,7 +32,8 @@
 				<li><a href="/store">Store</a></li>
 				<li><a href="/findmentor">Find A Mentor</a></li>
 				<li><a href="/becomementor">Become Mentor</a></li>
-				<li><a href="/">Me </a></li>
+				<li><a href="/session">Session</a>
+        </li>
         {% if current_user.is_authenticated %}
         <li><a href="/logout">Logout</a></li>
         {% else %}

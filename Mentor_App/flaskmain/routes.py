@@ -104,7 +104,6 @@ def findmentor():
 def store():
 	return render_template('store.html')
 
-
 @app.route("/result",  methods=['GET', 'POST'])
 def result():
 	return render_template('result.html',dictionary=a)
@@ -127,6 +126,11 @@ def logout():
 @app.route('/test')
 def test():
 	return redirect(url_for('test.html'))
+@app.route('/session')
+def session():
+
+	return render_template('session.html')
+
 
 
 
