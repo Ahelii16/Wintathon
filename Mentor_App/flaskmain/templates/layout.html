@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <title>Profile</title> -->
+
+
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profilemain.css') }}">
+
+
+    {% if title %}
+        <title>LinkenIn- {{ title }}</title>
+    {% else %}
+        <title>LinkedIn</title>
+    {% endif %}
+</head>
+
+
+<body>
+ <header>
+	<nav>
+		<div class="headerrow clearfix" >
+			<img src="https://static.licdn.com/sc/h/95o6rrc5ws6mlw6wqzy0xgj7y" class="logo">
+			<!-- <input type="search" placeholder="🔍 Search"> -->
+
+			<ul class="main-nav">
+				<li><a href="/">Home </a></li>
+				<li><a href="/">My Network</a></li>
+				<li><a href="/store">Store</a></li>
+				<li><a href="/findmentor">Find A Mentor</a></li>
+				<li><a href="/becomementor">Become Mentor</a></li>
+				<li><a href="/">Me </a></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
+				<li><a href="/login">Login</a></li>
+        {% endif %}
+			</ul>
+			
+		</div>
+
+	</nav>
+
+
+</header> 
+       
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+         
+ {% block content %}{% endblock %}
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+	
+{% extends "layout.html" %}
+
+{% block content %}
+
+        <main id="intro-tile">
+        <section class="image-header">
+            <img width='100%' src="{{ url_for('static', filename='header.jpg') }}" alt="profile-header">
+        </section>
+        <section class="intro-header">
+            <div class="left-intro">
+                <div class="offset">
+
+                    <img id="profile-pic" src="{{ url_for('static', filename='linkedinclone.jpg') }}" alt="profile-pic">
+                </div>
+                <div>
+                    <span class="header">{{ current_user.username }}</span> <br>
+                    <span class="subheader">{{ current_user.email }}</span> <br>
+                    <p class="subtext">
+                    Learning Enthusiast ·
+                    <span class="blue-text">500+ connections</span> · 
+                    <span class="blue-text">{{ current_user.mobile_number }}</span>
+                    </p>
+                          <span class="subheader">SKILLS: {{ current_user.skills }}</span> <br>
+                    <span class="subheader">EXPERIENCE: {{ current_user.experience }}</span> <br>
+                </div>
+            </div>
+            <div class="right-intro">
+                <button id="add">Add Profile Section ▼</button>
+                <button id="more">More...</button>
+                <a href="#" id="pencil" class="fas fa-pencil-alt"></a>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock %}
