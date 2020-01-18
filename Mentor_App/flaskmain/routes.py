@@ -39,7 +39,9 @@ def home():
     return render_template('profile.html')
 
 @app.route('/findmentor', methods=['GET', 'POST'])
-def findmentor():
+def findmentor(): 
+
+
 	colours = ['Red', 'Blue', 'Black', 'Orange']
 	return render_template('findmentor.html', colours=colours)
 
@@ -47,6 +49,7 @@ def findmentor():
 @app.route("/store", methods=['GET', 'POST'])
 def store():
 	return render_template('store.html')
+
 
 @app.route("/becomementor", methods=['GET', 'POST'])
 def becomementor():
@@ -66,10 +69,10 @@ def logout():
 	logout_user()
 	return redirect(url_for('home'))
 
-@app.route('/test')
-def test():
+@app.route('/session')
+def session():
 
-	return redirect(url_for(''))
+	return render_template('session.html')
 
 
 
