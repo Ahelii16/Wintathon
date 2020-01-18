@@ -2,10 +2,14 @@
 
 {% block content %}
 
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 400px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -30,17 +34,17 @@ button:hover, a:hover {
 
   <div name="dictionary">
   {% for person in dictionary %}
-
+<br>
 <div class="card">
-  <img src="https://www.pngkey.com/png/full/52-523516_empty-profile-picture-circle.png" alt="pic" style="width:100%">
-  <h1>{{person.username}}</h1>
+  <center><img src="https://www.pngkey.com/png/full/52-523516_empty-profile-picture-circle.png" alt="pic" style="width:30%"></center>
+  <h4>{{person.username}}</h4>
   <div style="margin: 24px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a>
     <a href="#"><i class="fa fa-twitter"></i></a>
     <a href="#"><i class="fa fa-linkedin"></i></a>
     <a href="#"><i class="fa fa-facebook"></i></a>
   </div>
-  <p><a href= {{person.Available_Time}}><button class="btn">Schedule a meeting</button></a></p>
+  <p><a href= {{person.Available_Time}} target="_blank"><button class="btn">Schedule a meeting</button></a></p>
 </div>
 {% endfor %}
 </div>
