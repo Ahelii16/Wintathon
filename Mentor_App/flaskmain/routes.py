@@ -3,6 +3,7 @@ from flask import render_template, url_for, flash, redirect
 from flaskmain import app, db
 from flaskmain.loginform import LoginForm
 from flaskmain.models import User
+from flask import Flask, request, Response, render_template, jsonify
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -13,6 +14,8 @@ user={'name': 'Shefali Bansal', 'email': ' bansalshefali11@gmail.com',
 	
 }
 
+skills = ["UX_Design", "Machine Learning", "Graphic_Design", "Mathematics", "Web Development", "C++", "Java", "Android Development", "AUTOCAD", "Data Analytics", "Human Resources", "Physics", "Business Development", "Deep Learning", "Competitive Programming", "Open Source", "English Communication", "Economics", "Chemistry", "Blockchain"]
+level = ["None", "Beginner", "Intermediate", "Advanced"]
 @app.route("/login", methods=['GET', 'POST'])
 def login():
 	if current_user.is_authenticated:
@@ -46,7 +49,16 @@ def store():
 
 @app.route("/becomementor", methods=['GET', 'POST'])
 def becomementor():
-	return render_template('becomementor.html')
+	if request.method == "POST":
+		skill = request.form.get('skills')
+		experience = request.form.get('levels')
+		calendly_link = request.form.get('clylink')
+
+
+
+
+	return render_template('becomementor.html', skills=skills, levels=level)
+
 
 
 @app.route("/logout")

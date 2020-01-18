@@ -1,0 +1,31 @@
+
+
+<div class="multi-field-wrapper">
+		  <button type="button" class="add-field">Add Destination</button>
+		  <div class="multi-fields">
+			<div class="multi-field">
+				<select class="text-one" name="destination[]">
+					<option selected value="base">Please Select</option>
+					<option value="colombo">Colombo</option>
+				</select>
+				<br />
+
+				<select class="text-two" name="attraction_or_activity[]">
+					<option value="attraction_or_activity">Select the attractions or activities</option>
+					<option value="attraction">Attraction</option>
+					<option value="activity">Activity</option>
+				</select>
+				<!--input id="attr_acti_btn" type="button" value="Click to Show!" /-->
+
+				<select id="populated_attr_or_activity" name="attraction_or_activity_selected[]">
+					<!-- here I ahve to populate the ARRAYS as option -->
+					<option value="available_attr_act">Available attractions / activities</option>
+				</select>
+			</div>
+				<br/>
+				<!--div id="myDiv"></div>
+				<div id="attr_or_act_div"></div>
+
+			  <!--a href="#" class="remove_field">Remove</a-->
+
+		</div>

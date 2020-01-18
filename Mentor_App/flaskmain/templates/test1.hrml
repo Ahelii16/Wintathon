@@ -1,0 +1,36 @@
+   <div class="panel panel-default red">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <div class="panel-title">Skills <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+
+<div role="form" id="skill-form">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" class="form-control ui-autocomplete-input" id="skill" tabindex="2" name="skill" placeholder="add skills here e.g. Java" autocomplete="off">
+        </div>
+    </div>
+</div><div class="add-skills-rating-container" style="display: block;">
+    <div class="notch_dark"></div>
+    <div class="notch_light"></div>
+    <div id="rating_question">How would you rate yourself on this skill?</div>
+    <div class="skills_edit_cancel" style="display: none;">(×)Cancel
+    </div>
+    <div class="rating-container">
+
+        <input type="hidden" name="csrf_test_name" value="0ad2a3e4a60a44670e20f95c0578e870" id="csrf">
+        <input type="hidden" name="skill_id" id="skill_id" value="">
+        <input type="hidden" name="skill_action" id="skill_action" value="add">
+        <input type="hidden" name="skill_name" id="skill_name" value="">
+        <input type="hidden" name="skill_mode" id="skill_mode" value="add">
+        <input class="btn btn-primary rating-value" value="Beginner" readonly="readonly">
+        <input class="btn btn-primary rating-value" value="Intermediate" readonly="readonly">
+        <input class="btn btn-primary rating-value" value="Advanced" readonly="readonly">
+    </div>
+</div>
+
+            </div>
+        </div>
